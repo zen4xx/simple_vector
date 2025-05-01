@@ -148,7 +148,6 @@ private:
         T* new_data = new T [m_capacity];
         std::move(m_data, m_data+m_capacity, new_data); 
         delete[] m_data;
-        m_data = nullptr;
         m_data = new_data;
     }
 };
